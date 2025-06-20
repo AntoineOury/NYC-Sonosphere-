@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AR.js A-Frame Location-based</title>
+<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+<a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+  <a-camera gps-camera rotation-reader></a-camera>
+  <a-entity gps-entity-place="latitude: 40.731023; longitude: -73.997270">
+    <a-entity geometry="primitive: cylinder" position="0 -5 0" scale="100 .5 100" material="opacity: 0.5; color: red;"></a-entity>
+    <a-entity geometry="primitive: cylinder" position="-2 -4.5 -96" scale="40 0.5 40" material="opacity: 0.5; color: blue;"></a-entity>
+  </a-entity>
+</a-scene>
+</body>
+</html>
